@@ -1,0 +1,10 @@
+﻿{
+    "Id": "UnnamedWotrMod",
+    "DisplayName": "MorvarchsPlaystyleExpansions",
+    "Author": "Morvarch Princess",
+    "Version": "1.0.0",
+    "ManagerVersion": "0.21.3",
+    "Requirements": [],
+    "AssemblyName": "MorvarchsPlaystyleExpansions.dll",
+    "EntryMethod": "MorvarchsPlaystyleExpansions.Main.Load"
+}
