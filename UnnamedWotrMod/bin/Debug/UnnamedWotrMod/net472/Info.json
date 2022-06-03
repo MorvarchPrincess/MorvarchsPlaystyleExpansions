@@ -1,0 +1,10 @@
+﻿{
+    "Id": "UnnamedWotrMod",
+    "DisplayName": "UnnamedWotrMod",
+    "Author": "username",
+    "Version": "1.0.0",
+    "ManagerVersion": "0.21.3",
+    "Requirements": [],
+    "AssemblyName": "UnnamedWotrMod.dll",
+    "EntryMethod": "UnnamedWotrMod.Main.Load"
+}
