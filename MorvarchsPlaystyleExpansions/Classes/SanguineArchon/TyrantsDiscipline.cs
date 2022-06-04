@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using MorvarchsPlaystyleExpansions
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Utils.Types;
+using BlueprintCore.Conditions.Builder.ContextEx;
 
 namespace UnnamedWotrMod.Classes.SanguineArchon
 {
@@ -79,7 +80,7 @@ namespace UnnamedWotrMod.Classes.SanguineArchon
                 .SetDescription(LocalizationTool.CreateString("EriynesFuryFeatureDescription", "", false))
                 .SetIsClassFeature(true)
                 .SetRanks(1)
-                .AddFacts((new List<Blueprint<BlueprintUnitFactReference>> { CommonTemplates.Rage })
+                .AddFacts((new List<Blueprint<BlueprintUnitFactReference>> { CommonTemplates.Rage }))
                 .Configure();
         }
     }
@@ -93,23 +94,24 @@ namespace UnnamedWotrMod.Classes.SanguineArchon
                 .SetDescription(LocalizationTool.CreateString("KinslayerFeatureDescription", "", false))
                 .SetIsClassFeature(true)
                 .SetRanks(1)
-                .AddFacts((new List<Blueprint<BlueprintUnitFactReference>> { CommonTemplates.HumanFavoredEnemy })
+                .AddFacts((new List<Blueprint<BlueprintUnitFactReference>> { CommonTemplates.HumanFavoredEnemy }))
                 .Configure();
         }
     }
 
     class MercilessMassacre
     {
-        public static void AddMercilessMassecre()
+        public static void AddMercilessMassacre()
         {
-            var MercilessMassacreContextValue = ContextRankConfigs.ClassLevel(new string[] { Templates.SanguineArchonClass }, false, Kingmaker.Enums.AbilityRankType.DamageBonus).WithBonusValueProgression(4);
+            var MercilessMassacreContextRankConfig = ContextRankConfigs.ClassLevel(new string[] { Templates.SanguineArchonClass }, false, Kingmaker.Enums.AbilityRankType.DamageBonus).WithBonusValueProgression(4);
 
             var FearSpellDescriptor = new SpellDescriptorWrapper();
             FearSpellDescriptor.m_IntValue = 4194352;
 
             var MercilessMassacreContext = new ContextValue()
             {
-
+                ValueRank = Kingmaker.Enums.AbilityRankType.DamageBonus,
+                ValueType = ContextValueType.Rank,
             };
 
 
@@ -117,8 +119,10 @@ namespace UnnamedWotrMod.Classes.SanguineArchon
                 .SetDisplayName(LocalizationTool.CreateString("MercilessMassacreFeatureName", "Merciless Massacre", false))
                 .SetDescription(LocalizationTool.CreateString("MercilessMassacreFeatureDescription", "", false))
                 .SetIsClassFeature(true)
-                .AddDamageBonusConditional(true, true, Kingmaker.Enums.ModifierDescriptor.Profane, MercilessMassacreContextValue, ConditionsBuilder.New().ContextConditionHasBuffWithDescriptor(FearSpellDescriptor))
-                .Damage
+                .AddDamageBonusConditional(MercilessMassacreContext, true, ConditionsBuilder.New().HasBuffWithDescriptor(false, FearSpellDescriptor), null, true)
+                .AddContextRankConfig(MercilessMassacreContextRankConfig)
+                .SetRanks(1)
+                .Configure();
                
         }
     }
