@@ -7,7 +7,7 @@ using Kingmaker.UnitLogic.Mechanics;
 using BlueprintCore.Conditions.Builder;
 using Kingmaker.Blueprints.Classes.Spells;
 using System.Collections.Generic;
-using MorvarchsPlaystyleExpansions
+using MorvarchsPlaystyleExpansions;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Utils.Types;
 using BlueprintCore.Conditions.Builder.ContextEx;
@@ -122,8 +122,16 @@ namespace UnnamedWotrMod.Classes.SanguineArchon
                 .AddDamageBonusConditional(MercilessMassacreContext, true, ConditionsBuilder.New().HasBuffWithDescriptor(false, FearSpellDescriptor), null, true)
                 .AddContextRankConfig(MercilessMassacreContextRankConfig)
                 .SetRanks(1)
-                .Configure();
-               
+                .Configure();             
+        }
+    }
+
+    class QueensSword
+    {
+        public static void AddQueensSword()
+        {
+            var QueensSwordFeature = FeatureConfigurator.New("QueensSword", Templates.QueensSword)
+                .
         }
     }
 }

@@ -23,6 +23,7 @@ namespace MorvarchsPlaystyleExpansions.Common
         public static string Bravery = "f6388946f9f472f4585591b80e9f2452";
         public static string Rage = "2479395977cfeeb46b482bc3385f4647";
         public static string HumanFavoredEnemy = "7283344b0309d8e4cb77eb22f1e7c57a";
+        public static string WeaponTrainingHeavyBlades = "2a0ce0186af38ed419f47fce16f93c2a";
 
         // Misc
         public static readonly string BasicFeatSelectionGuid = "247a4068-296e-8be4-2890-143f451b4b45";
@@ -41,5 +42,6 @@ namespace MorvarchsPlaystyleExpansions.Common
         public static string EriynesFuryFeature = "A5B410E9-248C-4EE1-8457-6DB407641607";
         public static string KinslayerFeature = "45269B42-820D-4196-8D33-9C85D58CC53A";
         public static string MercilessMassacreFeature = "159A466B-A1AD-4672-BEF2-AA78658F42C2";
+        public static string QueensSword = "58F48935-AC30-44C6-A55D-AB8D56F62852";
     }
 }
