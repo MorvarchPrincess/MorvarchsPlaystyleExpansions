@@ -65,5 +65,42 @@ namespace MorvarchsPlaystyleExpansions
                 }
             }
         }
+
+        internal static void LogPatch(string v, object coupDeGraceAbility)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void Log(string msg)
+        {
+            Logger.Warn(msg);
+        }
+        [System.Diagnostics.Conditional("DEBUG")]
+        public static void LogDebug(string msg)
+        {
+            Logger.Warn(msg);
+        }
+        public static void LogPatch(string action, [NotNull] IScriptableObjectWithAssetId bp)
+        {
+            Log($"{action}: {bp.AssetGuid} - {bp.name}");
+        }
+        public static void LogHeader(string msg)
+        {
+            Log($"--{msg.ToUpper()}--");
+        }
+        public static void Error(Exception e, string message)
+        {
+            Logger.Error(message);
+            Logger.Error(e.ToString());
+        }
+        public static void Error(string message)
+        {
+            Logger.Error(message);
+        }
+
+        internal static void LogPatch(string v, Action addPulura)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
