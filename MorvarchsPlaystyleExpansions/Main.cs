@@ -7,13 +7,14 @@ using Kingmaker.Blueprints.JsonSystem;
 using MorvarchsPlaystyleExpansions.Feats;
 using BlueprintCore.Utils;
 using JetBrains.Annotations;
+using MorvarchsPlaystyleExpansions.Classes;
 
 namespace MorvarchsPlaystyleExpansions
 {
     public static class Main
     {
         public static bool Enabled;
-        private static readonly LogWrapper Logger = LogWrapper.Get("MagicalAptitude");
+        private static readonly LogWrapper Logger = LogWrapper.Get("MorvarchsPlaystyleExpansions");
 
         public static bool Load(UnityModManager.ModEntry modEntry)
         {
@@ -58,12 +59,19 @@ namespace MorvarchsPlaystyleExpansions
                     Logger.Info("Patching blueprints.");
                     DivineFightingTechniques.Configure();
                     BladedBrush.Configure();
+                    DivineSignifier.Configure();
+                    HellknightVanguard.Configure();
                 }
                 catch (Exception e)
                 {
                     Logger.Error("Failed to initialize.", e);
                 }
             }
+        }
+
+        public static void Log(string msg)
+        {
+            Logger.Info(msg);
         }
     }
 }

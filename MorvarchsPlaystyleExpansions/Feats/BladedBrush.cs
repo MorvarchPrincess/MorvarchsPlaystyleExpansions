@@ -21,7 +21,7 @@ namespace MorvarchsPlaystyleExpansions.Feats
         {
             FeatureConfigurator.New("BladedBrushFeat", FeatGuid.ToLower())
                 .SetDisplayName(LocalizationTool.CreateString("BladedBrushName", "Bladed Brush", false))
-                .SetDescription(LocalizationTool.CreateString("BladedBrushDescription", "A worshipper of Shelyn can take this feat ao use their dexterity on attack and damage with glaives.", false))
+                .SetDescription(LocalizationTool.CreateString("BladedBrushDescription", "A worshipper of Shelyn can take this feat to use their dexterity on attack and damage with glaives.", false))
                 .AddFeatureTagsComponent(FeatureTag.Attack)
                 .SetGroups(FeatureGroup.Feat, FeatureGroup.CombatFeat)
                 .AddPrerequisiteParametrizedWeaponFeature(Template.WeaponFocus, Kingmaker.Enums.WeaponCategory.Glaive)
@@ -31,7 +31,7 @@ namespace MorvarchsPlaystyleExpansions.Feats
                 .AddAttackStatReplacement(true,null, BlueprintCore.Blueprints.CustomConfigurators.ComponentMerge.Fail,Kingmaker.EntitySystem.Stats.StatType.Dexterity,Kingmaker.Enums.WeaponSubCategory.None, new List<Blueprint<BlueprintWeaponTypeReference>> {  Template.Glaive })
                 .Configure();
 
-            FeatureSelectionConfigurator.For(Template.BasicFeatSelectionGuid).AddToAllFeatures(FeatName).Configure(); ;
+            FeatureSelectionConfigurator.For(Template.BasicFeatSelectionGuid).AddToAllFeatures(FeatName).Configure();
         }
     }
 }
