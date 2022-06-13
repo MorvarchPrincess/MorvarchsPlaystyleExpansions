@@ -61,7 +61,7 @@ namespace MorvarchsPlaystyleExpansions.Classes
             foreach (BlueprintAbility channeltype in ChannelsList)
             {
                 ContextRankConfig ChannelScaling = (ContextRankConfig)Array.Find(channeltype.ComponentsArray, component => component is ContextRankConfig);
-                ChannelScaling.m_Class.Append(BlueprintUtils.GetBlueprint<BlueprintCharacterClass>(CommonTemplates.Signifier).ToReference<BlueprintCharacterClassReference>());
+                ChannelScaling.m_Class = ChannelScaling.m_Class.Append(BlueprintUtils.GetBlueprint<BlueprintCharacterClass>(CommonTemplates.Signifier).ToReference<BlueprintCharacterClassReference>()).ToArray();
                 ChannelScaling.m_BaseValueType = ContextRankBaseValueType.SummClassLevelWithArchetype;
             }
         }
@@ -126,11 +126,11 @@ namespace MorvarchsPlaystyleExpansions.Classes
 
             Main.Log("Fixing Animal Companion Progression");
             BlueprintProgression AnimalDomainProgression = BlueprintUtils.GetBlueprint<BlueprintProgression>("125af359f8bc9a145968b5d8fd8159b8");
-            AnimalDomainProgression.m_Classes.Append(new BlueprintProgression.ClassWithLevel()
+            AnimalDomainProgression.m_Classes = AnimalDomainProgression.m_Classes.Append(new BlueprintProgression.ClassWithLevel()
             {
                 m_Class = Signifier,
                 AdditionalLevel = 0
-            });
+            }).ToArray();
             
 
             List<String> DomainsAbilityAreaEffects = new List<String>()
@@ -186,7 +186,7 @@ namespace MorvarchsPlaystyleExpansions.Classes
                 BlueprintAbilityResource resource = BlueprintUtils.GetBlueprint<BlueprintAbilityResource>(abilityresource);
                 if (resource.m_MaxAmount.m_Class.Length > 0)
                 {
-                    resource.m_MaxAmount.m_Class.Append(Signifier);
+                    resource.m_MaxAmount.m_Class = resource.m_MaxAmount.m_Class.Append(Signifier).ToArray();
                 }
             }
 
@@ -224,7 +224,7 @@ namespace MorvarchsPlaystyleExpansions.Classes
             Main.Log("Fixing Sun Domain Ability");
             BlueprintFeature sunfeature = BlueprintUtils.GetBlueprint<BlueprintFeature>("3d8e38c9ed54931469281ab0cec506e9"); // Sun Domain Feature which is Wierd
             IncreaseSpellDamageByClassLevel ChannelScaling = (IncreaseSpellDamageByClassLevel)Array.Find(sunfeature.ComponentsArray, component => component is IncreaseSpellDamageByClassLevel);
-            ChannelScaling.m_AdditionalClasses.Append(Signifier);
+            ChannelScaling.m_AdditionalClasses = ChannelScaling.m_AdditionalClasses.Append(Signifier).ToArray();
 
             /*foreach (BlueprintFeatureReference DomainReference in DomainSelection.m_AllFeatures)
             {
@@ -311,17 +311,13 @@ namespace MorvarchsPlaystyleExpansions.Classes
 
             // Fix scaling
             BlueprintAbilityResource GodclawResource = BlueprintUtils.GetBlueprint<BlueprintAbilityResource>("01fc99f99d293404d87bc8b7a03ddb22");
-            GodclawResource.m_MaxAmount.m_Class.Append(charclass);
-            GodclawResource.m_MaxAmount.m_ClassDiv.Append(charclass);
+            GodclawResource.m_MaxAmount.m_Class = GodclawResource.m_MaxAmount.m_Class.Append(charclass).ToArray();
+            GodclawResource.m_MaxAmount.m_ClassDiv = GodclawResource.m_MaxAmount.m_ClassDiv.Append(charclass).ToArray();
 
             // Order of the Nail
             BlueprintProgression OrderNail = BlueprintUtils.GetBlueprint<BlueprintProgression>(CommonTemplates.OrderNail);
 
-            OrderNail.m_Classes.Append(new BlueprintProgression.ClassWithLevel()
-            {
-                m_Class = charclass,
-                AdditionalLevel = 0
-            });
+            OrderNail.m_Classes = OrderNail.m_Classes.Append(new BlueprintProgression.ClassWithLevel() { m_Class = charclass, AdditionalLevel = 0 }).ToArray();
 
             // Order of the Pyre
             BlueprintFeature OrderPyre = BlueprintUtils.GetBlueprint<BlueprintFeature>(CommonTemplates.OrderPyre);
@@ -352,7 +348,7 @@ namespace MorvarchsPlaystyleExpansions.Classes
 
             // Order of the Pyre final ability scaling
             ContextRankConfig PyreScaling = (ContextRankConfig)Array.Find(PyreFinal.ComponentsArray, component => component is ContextRankConfig);
-            PyreScaling.m_Class.Append(charclass);
+            PyreScaling.m_Class = PyreScaling.m_Class.Append(charclass).ToArray();
 
             // Order of the Rack
             /*BlueprintFeature OrderRack = BlueprintUtils.GetBlueprint<BlueprintFeature>(CommonTemplates.OrderRack);

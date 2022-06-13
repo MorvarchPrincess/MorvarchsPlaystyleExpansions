@@ -19,6 +19,8 @@ using BlueprintCore.Conditions.Builder;
 using BlueprintCore.Conditions.Builder.ContextEx;
 using Kingmaker.Blueprints.Root;
 using BlueprintCore.Blueprints.Configurators.Root;
+using Kingmaker;
+using BlueprintCore.Blueprints.Configurators.Classes.Selection;
 
 namespace MorvarchsPlaystyleExpansions.Classes
 {
@@ -45,33 +47,32 @@ namespace MorvarchsPlaystyleExpansions.Classes
             Main.Log("Create Vanguard class features");
 
             Main.Log("VanguardExpertise 1");
-            BlueprintFeatureSelection VanguardExpertise1 = new BlueprintFeatureSelection()
-            {
-                m_DisplayName = LocalizationTool.CreateString("VanguardExpertiseName", "Vanguard Expertise", false),
-                m_DescriptionShort = LocalizationTool.CreateString("VanguardExpertiseDescription", "A Hellknight Vanguard is trained on the common situations they will be expected to run into when deployed to their squadron," +
-                " every two levels starting at level 3, a Hellknight Vanguard can pick one Vangaurd Expertise to add to their repetoire. A Vanguard cannot select an individual talent more than once.", false),
-                IsClassFeature = true,
-                m_AllFeatures = new BlueprintFeatureReference[]
-                {
+
+            BlueprintFeatureSelection VanguardExpertise1 = FeatureSelectionConfigurator.New("VangaurdExpertise1", Template.VanguardExpertise1)
+                .SetDisplayName(LocalizationTool.CreateString("VanguardExpertiseName", "Vanguard Expertise", false))
+                .SetDescription(LocalizationTool.CreateString("VanguardExpertiseDescription", "A Hellknight Vanguard is trained on the common situations they will be expected to run into when deployed to their squadron," +
+                " every two levels starting at level 3, a Hellknight Vanguard can pick one Vangaurd Expertise to add to their repetoire. A Vanguard cannot select an individual talent more than once.", false))
+                .SetIsClassFeature(true)
+                .SetRanks(1)
+                .AddToAllFeatures(
                     WeaponFocus.ToReference<BlueprintFeatureReference>(),
                     CombatTrick.ToReference<BlueprintFeatureReference>(),
                     RangerStyle2.ToReference<BlueprintFeatureReference>(),
                     SmiteChaos.ToReference<BlueprintFeatureReference>(),
                     FastStealth.ToReference<BlueprintFeatureReference>(),
                     CannyObserver.ToReference<BlueprintFeatureReference>(),
-                    IntimidatingProwess.ToReference<BlueprintFeatureReference>(),
-                },
-                Ranks = 1,
-            };
+                    IntimidatingProwess.ToReference<BlueprintFeatureReference>()
+                )
+                .Configure();
 
-            Main.Log("VanguardExpertise 2");
-            BlueprintFeatureSelection VanguardExpertise5 = new BlueprintFeatureSelection()
-            {
-                m_DisplayName = LocalizationTool.GetString("VanguardExpertiseName"),
-                m_DescriptionShort = LocalizationTool.GetString("VanguardExpertiseDescription"),
-                IsClassFeature = true,
-                m_AllFeatures = new BlueprintFeatureReference[]
-                {
+            Main.Log("VanguardExpertise 5");
+
+            BlueprintFeatureSelection VanguardExpertise5 = FeatureSelectionConfigurator.New("VangaurdExpertise5", Template.VanguardExpertise5)
+                .SetDisplayName(LocalizationTool.GetString("VanguardExpertiseName"))
+                .SetDescription(LocalizationTool.GetString("VanguardExpertiseDescription"))
+                .SetIsClassFeature(true)
+                .SetRanks(1)
+                .AddToAllFeatures(
                     WeaponFocus.ToReference<BlueprintFeatureReference>(),
                     CombatTrick.ToReference<BlueprintFeatureReference>(),
                     RangerStyle2.ToReference<BlueprintFeatureReference>(),
@@ -79,30 +80,29 @@ namespace MorvarchsPlaystyleExpansions.Classes
                     SmiteChaos.ToReference<BlueprintFeatureReference>(),
                     FastStealth.ToReference<BlueprintFeatureReference>(),
                     CannyObserver.ToReference<BlueprintFeatureReference>(),
-                    IntimidatingProwess.ToReference<BlueprintFeatureReference>(),
-                },
-                Ranks = 1,
-            };
+                    IntimidatingProwess.ToReference<BlueprintFeatureReference>()
+                )
+                .Configure();
 
-            Main.Log("VanguardExpertise 3");
-            BlueprintFeatureSelection VanguardExpertise9 = new BlueprintFeatureSelection()
-            {
-                m_DisplayName = LocalizationTool.GetString("VanguardExpertiseName"),
-                m_DescriptionShort = LocalizationTool.GetString("VanguardExpertiseDescription"),
-                IsClassFeature = true,
-                m_AllFeatures = new BlueprintFeatureReference[]
-                {
+            Main.Log("VanguardExpertise 9");
+
+            BlueprintFeatureSelection VanguardExpertise9 = FeatureSelectionConfigurator.New("VangaurdExpertise9", Template.VanguardExpertise9)
+                .SetDisplayName(LocalizationTool.GetString("VanguardExpertiseName"))
+                .SetDescription(LocalizationTool.GetString("VanguardExpertiseDescription"))
+                .SetIsClassFeature(true)
+                .SetRanks(1)
+                .AddToAllFeatures(
                     WeaponFocus.ToReference<BlueprintFeatureReference>(),
                     CombatTrick.ToReference<BlueprintFeatureReference>(),
                     RangerStyle2.ToReference<BlueprintFeatureReference>(),
                     RangerStyle6.ToReference<BlueprintFeatureReference>(),
+                    RangerStyle10.ToReference<BlueprintFeatureReference>(),
                     SmiteChaos.ToReference<BlueprintFeatureReference>(),
                     FastStealth.ToReference<BlueprintFeatureReference>(),
                     CannyObserver.ToReference<BlueprintFeatureReference>(),
-                    IntimidatingProwess.ToReference<BlueprintFeatureReference>(),
-                },
-                Ranks = 1,
-            };
+                    IntimidatingProwess.ToReference<BlueprintFeatureReference>()
+                )
+                .Configure();
 
             Main.Log("Hellknights Dread");
             var DreadContextRankConfig = ContextRankConfigs.ClassLevel(new string[] { Template.HellknightVanguard }, false, Kingmaker.Enums.AbilityRankType.Default, 1, 10);
@@ -239,8 +239,8 @@ namespace MorvarchsPlaystyleExpansions.Classes
 
             Main.Log("Add Vanguard to the Root.");
 
-            BlueprintRoot Root = BlueprintUtils.GetBlueprint<BlueprintRoot>("2d77316c72b9ed44f888ceefc2a131f6");
-            Root.Progression.m_CharacterClasses.Append(VanguardReference);
+            BlueprintRoot Root = Game.Instance.BlueprintRoot;
+            Root.Progression.m_CharacterClasses = Root.Progression.m_CharacterClasses.Append(VanguardReference).ToArray();
 
             Main.Log("Fixing Orders for the Vanguard!");
 
