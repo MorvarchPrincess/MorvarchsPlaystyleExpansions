@@ -158,46 +158,56 @@ namespace MorvarchsPlaystyleExpansions.Classes
                 {
                     LevelEntryUtils.CreateLevelEntry(1,new BlueprintFeatureBase[]
                     {
-                        HellknightOrder,
-                        HellknightsDread
+                        (BlueprintFeatureBase) HellknightOrder,
+                        (BlueprintFeatureBase) HellknightsDread
                     }),
                     LevelEntryUtils.CreateLevelEntry(2,new BlueprintFeatureBase[]
                     {
-                        SneakAttack,
+                        (BlueprintFeatureBase) SneakAttack,
                     }),
                     LevelEntryUtils.CreateLevelEntry(3,new BlueprintFeatureBase[]
                     {
-                        VanguardExpertise1
+                        (BlueprintFeatureBase) VanguardExpertise1
                     }),
                     LevelEntryUtils.CreateLevelEntry(4,new BlueprintFeatureBase[]
                     {
-                        SneakAttack
+                       (BlueprintFeatureBase) SneakAttack
                     }),
                     LevelEntryUtils.CreateLevelEntry(5,new BlueprintFeatureBase[]
                     {
-                        VanguardExpertise5
+                       (BlueprintFeatureBase) VanguardExpertise5
                     }),
                     LevelEntryUtils.CreateLevelEntry(6,new BlueprintFeatureBase[]
                     {
-                        SneakAttack,
+                        (BlueprintFeatureBase) SneakAttack,
                     }),
                     LevelEntryUtils.CreateLevelEntry(7,new BlueprintFeatureBase[]
                     {
-                        VanguardExpertise5
+                        (BlueprintFeatureBase) VanguardExpertise5
                     }),
                     LevelEntryUtils.CreateLevelEntry(8,new BlueprintFeatureBase[]
                     {
-                        SneakAttack,
+                        (BlueprintFeatureBase) SneakAttack,
                     }),
                     LevelEntryUtils.CreateLevelEntry(9,new BlueprintFeatureBase[]
                     {
-                        VanguardExpertise9
+                        (BlueprintFeatureBase) VanguardExpertise9
                     }),
                     LevelEntryUtils.CreateLevelEntry(10,new BlueprintFeatureBase[]
                     {
-                        SneakAttack,
-                        VanguardExecution
+                        (BlueprintFeatureBase) SneakAttack,
+                        (BlueprintFeatureBase) VanguardExecution
                     }),
+                })
+                .SetIsClassFeature(true)
+                .SetRanks(1)
+                .SetClasses(new BlueprintProgression.ClassWithLevel[]
+                {
+                    new BlueprintProgression.ClassWithLevel()
+                    {
+                        m_Class = BlueprintUtils.CreateReference<BlueprintCharacterClassReference>(Template.HellknightVanguard),
+                        AdditionalLevel = 0,
+                    }
                 })
                 .Configure();
 

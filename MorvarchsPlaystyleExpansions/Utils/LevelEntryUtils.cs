@@ -10,6 +10,7 @@ namespace MorvarchsPlaystyleExpansions.Utils
 {
     class LevelEntryUtils
     {
+        // Thanks to TTT for this code!
         public static LevelEntry CreateLevelEntry(int level, params BlueprintFeatureBase[] features)
         {
             return CreateLevelEntry(level, features.Select(f => f.ToReference<BlueprintFeatureBaseReference>()).ToArray());
