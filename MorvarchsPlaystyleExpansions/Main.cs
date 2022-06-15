@@ -60,7 +60,7 @@ namespace MorvarchsPlaystyleExpansions
                     DivineFightingTechniques.Configure();
                     BladedBrush.Configure();
                     DivineSignifier.Configure();
-                    HellknightVanguard.Configure();
+                    HellknightShadow.Configure();
                 }
                 catch (Exception e)
                 {

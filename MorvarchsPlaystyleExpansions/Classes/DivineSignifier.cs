@@ -261,25 +261,29 @@ namespace MorvarchsPlaystyleExpansions.Classes
             // Order of the Chain
             BlueprintFeature OrderChain = BlueprintUtils.GetBlueprint<BlueprintFeature>(CommonTemplates.OrderChain);
 
+
             OrderChain.ComponentsArray = OrderChain.ComponentsArray.Concat(new BlueprintComponent[]
             {
                 new AddFeatureOnClassLevel()
                 {
                     Level = 1,
                     m_Feature = BlueprintUtils.GetBlueprint<BlueprintFeature>("6c27b29fc314c744e9ac860d6beec5de").ToReference<BlueprintFeatureReference>(),
-                    m_Class = charclass
+                    m_Class = charclass,
+                    name = "Chain1"+charclass.guid
                 },
                 new AddFeatureOnClassLevel()
                 {
                     Level = 5,
                     m_Feature = BlueprintUtils.GetBlueprint<BlueprintFeature>("35e04fbe27a880e4cbf0d82d9fcc2a89").ToReference<BlueprintFeatureReference>(),
-                    m_Class = charclass
+                    m_Class = charclass,
+                    name = "Chain2"+charclass.guid
                 },
                 new AddFeatureOnClassLevel()
                 {
                     Level = 9,
                     m_Feature = BlueprintUtils.GetBlueprint<BlueprintFeature>("d20cb27b25ab2c144ad610788d12f9d9").ToReference<BlueprintFeatureReference>(),
-                    m_Class = charclass
+                    m_Class = charclass,
+                    name = "Chain3"+charclass.guid
                 },
             }).ToArray();
 
@@ -293,19 +297,22 @@ namespace MorvarchsPlaystyleExpansions.Classes
                 {
                     Level = 1,
                     m_Feature = BlueprintUtils.GetBlueprint<BlueprintFeature>("4b46f15dcb606954e84d954d5a6596eb").ToReference<BlueprintFeatureReference>(),
-                    m_Class = charclass
+                    m_Class = charclass,
+                    name = "Claw1"+charclass.guid
                 },
                 new AddFeatureOnClassLevel()
                 {
                     Level = 5,
                     m_Feature = BlueprintUtils.GetBlueprint<BlueprintFeature>("c6984918b13d01f4c960b6bbd8238bb7").ToReference<BlueprintFeatureReference>(),
-                    m_Class = charclass
+                    m_Class = charclass,
+                    name = "Claw2"+charclass.guid
                 },
                 new AddFeatureOnClassLevel()
                 {
                     Level = 9,
                     m_Feature = BlueprintUtils.GetBlueprint<BlueprintFeature>("1333c86f7d5fb9b46bf989b54a3f2a59").ToReference<BlueprintFeatureReference>(),
-                    m_Class = charclass
+                    m_Class = charclass,
+                    name = "Claw3"+charclass.guid
                 },
             }).ToArray();
 
@@ -330,19 +337,22 @@ namespace MorvarchsPlaystyleExpansions.Classes
                 {
                     Level = 1,
                     m_Feature = BlueprintUtils.GetBlueprint<BlueprintFeature>("babbd657ca5068248a3ea7b246054e45").ToReference<BlueprintFeatureReference>(),
-                    m_Class = charclass
+                    m_Class = charclass,
+                    name = "Pyre1"+charclass.guid
                 },
                 new AddFeatureOnClassLevel()
                 {
                     Level = 5,
                     m_Feature = BlueprintUtils.GetBlueprint<BlueprintFeature>("d0d8a4d7803b116458d01121e6416e9e").ToReference<BlueprintFeatureReference>(),
-                    m_Class = charclass
+                    m_Class = charclass,
+                    name = "Pyre2"+charclass.guid
                 },
                 new AddFeatureOnClassLevel()
                 {
                     Level = 9,
                     m_Feature = PyreFinal.ToReference<BlueprintFeatureReference>(),
-                    m_Class = charclass
+                    m_Class = charclass,
+                    name = "Pyre3"+charclass.guid
                 },
             }).ToArray();
 
@@ -400,19 +410,22 @@ namespace MorvarchsPlaystyleExpansions.Classes
                 {
                     Level = 1,
                     m_Feature = BlueprintUtils.GetBlueprint<BlueprintFeature>("8c5974ab11a8a0c4b8ee93d98b2473d7").ToReference<BlueprintFeatureReference>(),
-                    m_Class = charclass
+                    m_Class = charclass,
+                    name = "Scourge1"+charclass.guid
                 },
                 new AddFeatureOnClassLevel()
                 {
                     Level = 5,
                     m_Feature = BlueprintUtils.GetBlueprint<BlueprintFeature>("e4553aa5d0395a346a6b4c7817c9867e").ToReference<BlueprintFeatureReference>(),
-                    m_Class = charclass
+                    m_Class = charclass,
+                    name = "Scourge2"+charclass.guid
                 },
                 new AddFeatureOnClassLevel()
                 {
                     Level = 9,
                     m_Feature = BlueprintUtils.GetBlueprint<BlueprintFeature>("10bb771a02b0c5c409530ceb4e0594a4").ToReference<BlueprintFeatureReference>(),
-                    m_Class = charclass
+                    m_Class = charclass,
+                    name = "Scourge3"+charclass.guid
                 },
             }).ToArray();
         }

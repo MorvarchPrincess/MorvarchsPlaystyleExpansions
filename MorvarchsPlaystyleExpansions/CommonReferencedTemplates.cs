@@ -62,12 +62,15 @@ namespace MorvarchsPlaystyleExpansions.Common
         public static string Catechesis = "A5136EB1-A13C-414A-85F0-77D411CBB194";
 
         // Hellknight Vanguard
-        public static string HellknightVanguard = "D9411A30-4570-4FED-99AD-6243672B31C0";
-        public static string HellknightVanguardProgression = "69FC6CD7-83F2-4F48-8704-65868FB1ADE6";
+        public static string HellknightShadow = "D9411A30-4570-4FED-99AD-6243672B31C0";
+        public static string HellknightShadowProgression = "69FC6CD7-83F2-4F48-8704-65868FB1ADE6";
         public static string HellknightsDread = "E6EB2D21-8473-4427-919E-7F398E65BF64";
-        public static string VanguardExecution = "B2047591-1EC5-4F15-8E51-F1C61F4507CE";
-        public static string VanguardExpertise1 = "240082CD-72A5-4734-AF21-455A9F35FAE7";
-        public static string VanguardExpertise5 = "05C7E746-A2D2-4015-AF50-85D1BF2569FF";
-        public static string VanguardExpertise9 = "678AB522-1B48-4B09-ACDD-E232CF25820D";
+        public static string ShadowExecution = "B2047591-1EC5-4F15-8E51-F1C61F4507CE";
+        public static string ShadowExpertise1 = "240082CD-72A5-4734-AF21-455A9F35FAE7";
+        public static string ShadowExpertise5 = "05C7E746-A2D2-4015-AF50-85D1BF2569FF";
+        public static string ShadowExpertise9 = "678AB522-1B48-4B09-ACDD-E232CF25820D";
+
+        // Master Chymist
+        public static string MasterChymist = "0BB5A630-0492-4B8D-A8A2-99AFE7976416";
     }
 }

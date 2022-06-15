@@ -24,11 +24,11 @@ using BlueprintCore.Blueprints.Configurators.Classes.Selection;
 
 namespace MorvarchsPlaystyleExpansions.Classes
 {
-    class HellknightVanguard
+    class HellknightShadow
     {
         public static void Configure()
         {
-            Main.Log("Load main Vanguard BPs");
+            Main.Log("Load main Shadow BPs");
 
             BlueprintParametrizedFeature WeaponFocus = BlueprintUtils.GetBlueprint<BlueprintParametrizedFeature>("1e1f627d26ad36f43bbd26cc2bf8ac7e");
 
@@ -44,14 +44,14 @@ namespace MorvarchsPlaystyleExpansions.Classes
             BlueprintFeature DispellingAttack = BlueprintUtils.GetBlueprint<BlueprintFeature>("1b92146b8a9830d4bb97ab694335fa7c");
             BlueprintFeature Opportunist = BlueprintUtils.GetBlueprint<BlueprintFeature>("5bb6dc5ce00550441880a6ff8ad4c968");
 
-            Main.Log("Create Vanguard class features");
+            Main.Log("Create Shadow class features");
 
-            Main.Log("VanguardExpertise 1");
+            Main.Log("ShadowExpertise 1");
 
-            BlueprintFeatureSelection VanguardExpertise1 = FeatureSelectionConfigurator.New("VangaurdExpertise1", Template.VanguardExpertise1)
-                .SetDisplayName(LocalizationTool.CreateString("VanguardExpertiseName", "Vanguard Expertise", false))
-                .SetDescription(LocalizationTool.CreateString("VanguardExpertiseDescription", "A Hellknight Vanguard is trained on the common situations they will be expected to run into when deployed to their squadron," +
-                " every two levels starting at level 3, a Hellknight Vanguard can pick one Vangaurd Expertise to add to their repetoire. A Vanguard cannot select an individual talent more than once.", false))
+            BlueprintFeatureSelection ShadowExpertise1 = FeatureSelectionConfigurator.New("ShadowExpertise1", Template.ShadowExpertise1)
+                .SetDisplayName(LocalizationTool.CreateString("ShadowExpertiseName", "Shadow Expertise", false))
+                .SetDescription(LocalizationTool.CreateString("ShadowExpertiseDescription", "A Hellknight Shadow is trained on the common situations they will be expected to run into when deployed to their squadron," +
+                " every two levels starting at level 3, a Hellknight Shadow can pick one Vangaurd Expertise to add to their repetoire. A Shadow cannot select an individual talent more than once.", false))
                 .SetIsClassFeature(true)
                 .SetRanks(1)
                 .AddToAllFeatures(
@@ -65,11 +65,9 @@ namespace MorvarchsPlaystyleExpansions.Classes
                 )
                 .Configure();
 
-            Main.Log("VanguardExpertise 5");
-
-            BlueprintFeatureSelection VanguardExpertise5 = FeatureSelectionConfigurator.New("VangaurdExpertise5", Template.VanguardExpertise5)
-                .SetDisplayName(LocalizationTool.GetString("VanguardExpertiseName"))
-                .SetDescription(LocalizationTool.GetString("VanguardExpertiseDescription"))
+            BlueprintFeatureSelection ShadowExpertise5 = FeatureSelectionConfigurator.New("ShadowExpertise5", Template.ShadowExpertise5)
+                .SetDisplayName(LocalizationTool.GetString("ShadowExpertiseName"))
+                .SetDescription(LocalizationTool.GetString("ShadowExpertiseDescription"))
                 .SetIsClassFeature(true)
                 .SetRanks(1)
                 .AddToAllFeatures(
@@ -84,11 +82,11 @@ namespace MorvarchsPlaystyleExpansions.Classes
                 )
                 .Configure();
 
-            Main.Log("VanguardExpertise 9");
+            Main.Log("ShadowExpertise 9");
 
-            BlueprintFeatureSelection VanguardExpertise9 = FeatureSelectionConfigurator.New("VangaurdExpertise9", Template.VanguardExpertise9)
-                .SetDisplayName(LocalizationTool.GetString("VanguardExpertiseName"))
-                .SetDescription(LocalizationTool.GetString("VanguardExpertiseDescription"))
+            BlueprintFeatureSelection ShadowExpertise9 = FeatureSelectionConfigurator.New("ShadowExpertise9", Template.ShadowExpertise9)
+                .SetDisplayName(LocalizationTool.GetString("ShadowExpertiseName"))
+                .SetDescription(LocalizationTool.GetString("ShadowExpertiseDescription"))
                 .SetIsClassFeature(true)
                 .SetRanks(1)
                 .AddToAllFeatures(
@@ -105,7 +103,7 @@ namespace MorvarchsPlaystyleExpansions.Classes
                 .Configure();
 
             Main.Log("Hellknights Dread");
-            var DreadContextRankConfig = ContextRankConfigs.ClassLevel(new string[] { Template.HellknightVanguard }, false, Kingmaker.Enums.AbilityRankType.Default, 1, 10);
+            var DreadContextRankConfig = ContextRankConfigs.ClassLevel(new string[] { Template.HellknightShadow }, false, Kingmaker.Enums.AbilityRankType.Default, 1, 10);
 
             var DreadContextValue = new ContextValue()
             {
@@ -116,8 +114,8 @@ namespace MorvarchsPlaystyleExpansions.Classes
 
             BlueprintFeature HellknightsDread = FeatureConfigurator.New("HellknightsDread", Template.HellknightsDread)
                 .SetDisplayName(LocalizationTool.CreateString("HellknightsDreadName", "Hellknights Dread", false))
-                .SetDescription(LocalizationTool.CreateString("HellknightsDreadDescription", "Hellknights have a dreaded reputation throughout most of Golarion, and none more so than the Hellknight Vanguard. They use this reputation to great effect, terrifying" +
-                "near all they come across. This gives the Hellknight Vanguard a bonus to persuasion checks to intimidate equal to the Vanguard's Class Level."))
+                .SetDescription(LocalizationTool.CreateString("HellknightsDreadDescription", "Hellknights have a dreaded reputation throughout most of Golarion, and none more so than the Hellknight Shadow. They use this reputation to great effect, terrifying" +
+                "near all they come across. This gives the Hellknight Shadow a bonus to persuasion checks to intimidate equal to the Shadow's Class Level."))
                 .AddContextStatBonus(StatType.CheckIntimidate, DreadContextValue, Kingmaker.Enums.ModifierDescriptor.Insight, 0, 1)
                 .AddContextRankConfig(DreadContextRankConfig)
                 .SetIsClassFeature(true)
@@ -130,30 +128,31 @@ namespace MorvarchsPlaystyleExpansions.Classes
             BlueprintFeature HellknightOrder = BlueprintUtils.GetBlueprint<BlueprintFeature>("e31d849e4eb2578458419c9df622270f");
 
 
-            Main.Log("Vanguard Execution");
-            var VanguardExecutionContextRankConfig = ContextRankConfigs.FeatureRank("e31d849e4eb2578458419c9df622270f", false, Kingmaker.Enums.AbilityRankType.StatBonus, 3, 3);
+            Main.Log("Shadow Execution");
+            var ShadowExecutionContextRankConfig = ContextRankConfigs.FeatureRank("e31d849e4eb2578458419c9df622270f", false, Kingmaker.Enums.AbilityRankType.StatBonus, 3, 3);
 
             var FearSpellDescriptor = new SpellDescriptorWrapper();
             FearSpellDescriptor.m_IntValue = 4194352;
 
-            var VanguardExecutionContext = new ContextValue()
+            var ShadowExecutionContext = new ContextValue()
             {
                 ValueRank = Kingmaker.Enums.AbilityRankType.StatBonus,
                 ValueType = ContextValueType.Rank,
             };
 
-            BlueprintFeature VanguardExecution = FeatureConfigurator.New("VanguardExecution", Template.VanguardExecution)
-                .SetDisplayName(LocalizationTool.CreateString("VanguardExecutionName", "Vanguard Execution", false))
-                .SetDescription(LocalizationTool.CreateString("VanguardExecutionDescription", "A Hellknight Vanguard's pinnacle technique is learning to deftly slide into the gaps left by opponents not in their right mind, taking advantage " +
-                "of a scared or otherwise mentally imparied opponent to strike true. This gives the Hellknight Vanguard a +3 to attack against any opponent affected by a fear or mind affecting effect.", false))
-                .AddAttackBonusConditional(VanguardExecutionContext, false, ConditionsBuilder.New().HasBuffWithDescriptor(false, FearSpellDescriptor), Kingmaker.Enums.ModifierDescriptor.Insight)
-                .AddContextRankConfig(VanguardExecutionContextRankConfig)
+            BlueprintFeature ShadowExecution = FeatureConfigurator.New("ShadowExecution", Template.ShadowExecution)
+                .SetDisplayName(LocalizationTool.CreateString("ShadowExecutionName", "Shadow Execution", false))
+                .SetDescription(LocalizationTool.CreateString("ShadowExecutionDescription", "A Hellknight Shadow's pinnacle technique is learning to deftly slide into the gaps left by opponents not in their right mind, taking advantage " +
+                "of a scared or otherwise mentally imparied opponent to strike true. This gives the Hellknight Shadow a +3 to attack against any opponent affected by a fear or mind affecting effect.", false))
+                .AddAttackBonusConditional(ShadowExecutionContext, false, ConditionsBuilder.New().HasBuffWithDescriptor(false, FearSpellDescriptor), Kingmaker.Enums.ModifierDescriptor.Insight)
+                .AddContextRankConfig(ShadowExecutionContextRankConfig)
                 .SetIsClassFeature(true)
                 .SetRanks(1)
                 .Configure();
 
-            Main.Log("Create the Vanguard's Progression");
-            BlueprintProgression VanguardProgression = ProgressionConfigurator.New("HellknightVanguardProgression", Template.HellknightVanguardProgression)
+            Main.Log("Create the Shadow's Progression");
+            BlueprintProgression ShadowProgression = ProgressionConfigurator.New("HellknightShadowProgression", Template.HellknightShadowProgression)
+                .SetDisplayName(LocalizationTool.CreateString("HellknightShadowProgression", "Hellknight Shadow Progression", false))
                 .AddToLevelEntries(new LevelEntry[]
                 {
                     LevelEntryUtils.CreateLevelEntry(1,new BlueprintFeatureBase[]
@@ -167,7 +166,7 @@ namespace MorvarchsPlaystyleExpansions.Classes
                     }),
                     LevelEntryUtils.CreateLevelEntry(3,new BlueprintFeatureBase[]
                     {
-                        (BlueprintFeatureBase) VanguardExpertise1
+                        (BlueprintFeatureBase) ShadowExpertise1
                     }),
                     LevelEntryUtils.CreateLevelEntry(4,new BlueprintFeatureBase[]
                     {
@@ -175,7 +174,7 @@ namespace MorvarchsPlaystyleExpansions.Classes
                     }),
                     LevelEntryUtils.CreateLevelEntry(5,new BlueprintFeatureBase[]
                     {
-                       (BlueprintFeatureBase) VanguardExpertise5
+                       (BlueprintFeatureBase) ShadowExpertise5
                     }),
                     LevelEntryUtils.CreateLevelEntry(6,new BlueprintFeatureBase[]
                     {
@@ -183,7 +182,7 @@ namespace MorvarchsPlaystyleExpansions.Classes
                     }),
                     LevelEntryUtils.CreateLevelEntry(7,new BlueprintFeatureBase[]
                     {
-                        (BlueprintFeatureBase) VanguardExpertise5
+                        (BlueprintFeatureBase) ShadowExpertise5
                     }),
                     LevelEntryUtils.CreateLevelEntry(8,new BlueprintFeatureBase[]
                     {
@@ -191,12 +190,12 @@ namespace MorvarchsPlaystyleExpansions.Classes
                     }),
                     LevelEntryUtils.CreateLevelEntry(9,new BlueprintFeatureBase[]
                     {
-                        (BlueprintFeatureBase) VanguardExpertise9
+                        (BlueprintFeatureBase) ShadowExpertise9
                     }),
                     LevelEntryUtils.CreateLevelEntry(10,new BlueprintFeatureBase[]
                     {
                         (BlueprintFeatureBase) SneakAttack,
-                        (BlueprintFeatureBase) VanguardExecution
+                        (BlueprintFeatureBase) ShadowExecution
                     }),
                 })
                 .SetIsClassFeature(true)
@@ -205,8 +204,9 @@ namespace MorvarchsPlaystyleExpansions.Classes
                 {
                     new BlueprintProgression.ClassWithLevel()
                     {
-                        m_Class = BlueprintUtils.CreateReference<BlueprintCharacterClassReference>(Template.HellknightVanguard),
+                        m_Class = BlueprintUtils.CreateReference<BlueprintCharacterClassReference>(Template.HellknightShadow),
                         AdditionalLevel = 0,
+                        
                     }
                 })
                 .Configure();
@@ -214,11 +214,12 @@ namespace MorvarchsPlaystyleExpansions.Classes
             Main.Log("Create the class itself");
 
             // Create the Class!
-            BlueprintCharacterClass Vanguard = CharacterClassConfigurator.New("Hellknight Vanguard", Template.HellknightVanguard)
-                .SetLocalizedName(LocalizationTool.CreateString("HellknightVanguardName", "Hellknight Vanguard", false))
-                .SetLocalizedDescription(LocalizationTool.CreateString("HellknightVanguardDescription", "Hellknight Vanguards are the group called upon when the Hellknights need a defter touch. Specialized in subterfuge, scouting and very occasionally assassination, " +
-                "the Hellknight Vanguards are a terrifying rumor in the ears of enemies of the Hellknights.", false))
-                .SetLocalizedDescriptionShort(LocalizationTool.CreateString("HellknightVanguardShortDescription","The Hellknight Vanguard is a rogue focused Hellknight prestige class",false))
+            BlueprintCharacterClass Shadow = CharacterClassConfigurator.New("Hellknight Shadow", Template.HellknightShadow)
+                .SetLocalizedName(LocalizationTool.CreateString("HellknightShadowName", "Hellknight Shadow", false))
+                .SetLocalizedDescriptionShort(LocalizationTool.CreateString("HellknightShadowShortDesc", "", false))
+                .SetLocalizedDescription(LocalizationTool.CreateString("HellknightShadowDescription", "Hellknight Shadows are the group called upon when the Hellknights need a defter touch. Specialized in subterfuge, scouting and very occasionally assassination, " +
+                "the Hellknight Shadows are a terrifying rumor in the ears of enemies of the Hellknights.", false))
+                .SetLocalizedDescriptionShort(LocalizationTool.CreateString("HellknightShadowShortDescription","The Hellknight Shadow is a rogue focused Hellknight prestige class",false))
                 .AddPrerequisiteStatValue(StatType.SkillPerception, 5)
                 .AddPrerequisiteStatValue(StatType.SkillThievery, 5)
                 .AddPrerequisiteStatValue(StatType.SkillMobility, 5)
@@ -240,21 +241,21 @@ namespace MorvarchsPlaystyleExpansions.Classes
                     StatType.SkillPerception,
                     StatType.SkillPersuasion,
                 })
-                .SetProgression(VanguardProgression.ToReference<BlueprintProgressionReference>())
+                .SetProgression(ShadowProgression.ToReference<BlueprintProgressionReference>())
                 .Configure();
 
-            Main.Log("Vanguard successfully created!");
+            Main.Log("Shadow successfully created!");
 
-            BlueprintCharacterClassReference VanguardReference = Vanguard.ToReference<BlueprintCharacterClassReference>();
+            BlueprintCharacterClassReference ShadowReference = Shadow.ToReference<BlueprintCharacterClassReference>();
 
-            Main.Log("Add Vanguard to the Root.");
+            Main.Log("Add Shadow to the Root.");
 
             BlueprintRoot Root = Game.Instance.BlueprintRoot;
-            Root.Progression.m_CharacterClasses = Root.Progression.m_CharacterClasses.Append(VanguardReference).ToArray();
+            Root.Progression.m_CharacterClasses = Root.Progression.m_CharacterClasses.Append(ShadowReference).ToArray();
 
-            Main.Log("Fixing Orders for the Vanguard!");
+            Main.Log("Fixing Orders for the Shadow!");
 
-            DivineSignifier.FixHellknightOrders(VanguardReference);
+            DivineSignifier.FixHellknightOrders(ShadowReference);
 
             Main.Log("Domains Fixed!");
         }
