@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Kingmaker.Blueprints;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 
 namespace MorvarchsPlaystyleExpansions.Feats
 {
@@ -28,10 +30,10 @@ namespace MorvarchsPlaystyleExpansions.Feats
                 .SetGroups(FeatureGroup.Feat, FeatureGroup.CombatFeat)
                 .AddPrerequisiteFeature(Template.Shelyn)
                 .AddPrerequisiteParametrizedWeaponFeature(Template.WeaponFocus, Kingmaker.Enums.WeaponCategory.Glaive)
-                .AddRecommendationStatComparison(4,Kingmaker.EntitySystem.Stats.StatType.Dexterity, Kingmaker.EntitySystem.Stats.StatType.Strength)
+                .AddRecommendationStatComparison(Kingmaker.EntitySystem.Stats.StatType.Dexterity, Kingmaker.EntitySystem.Stats.StatType.Strength, 4)
                 .AddRecommendationHasFeature(Template.Shelyn)
                 .AddWeaponTypeDamageStatReplacement(Kingmaker.Enums.WeaponCategory.Glaive, false, Kingmaker.EntitySystem.Stats.StatType.Dexterity, false)
-                .AddAttackStatReplacement(true,null, BlueprintCore.Blueprints.CustomConfigurators.ComponentMerge.Fail,Kingmaker.EntitySystem.Stats.StatType.Dexterity,Kingmaker.Enums.WeaponSubCategory.None, new List<Blueprint<BlueprintWeaponTypeReference>> {  Template.Glaive })
+                //.AddAttackStatReplacement(true,null, BlueprintCore.Blueprints.CustomConfigurators.ComponentMerge.Fail,Kingmaker.EntitySystem.Stats.StatType.Dexterity,Kingmaker.Enums.WeaponSubCategory.None, new List<Blueprint<BlueprintWeaponTypeReference>> {  Template.Glaive })
                 .Configure();
 
             FeatureSelectionConfigurator.For(Template.BasicFeatSelectionGuid).AddToAllFeatures(FeatName).Configure(); ;

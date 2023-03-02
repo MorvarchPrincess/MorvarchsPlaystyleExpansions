@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "FVcV0wmE6yp/Fci9SX67ML1f5Y5lWubI4wLhltiy7tPq1Ho8eQt+PH4YQXshFRLLSlCSlflsbZOhIr2niI4mMw==",
+  "dgSpecHash": "C/3m3XEcJnv6HhH4AcgUd0c8ftTAPWI8GOYWpj1Sh7EVUV8y4LP/oEGl0MSV9Y9h5IDqYCsD5jMTfr9njSHnNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pulla\\Git\\Pathfinder\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions.csproj",
+  "projectFilePath": "E:\\GitHub\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\pulla\\.nuget\\packages\\assemblypublicizer\\1.0.1\\assemblypublicizer.1.0.1.nupkg.sha512",
-    "C:\\Users\\pulla\\.nuget\\packages\\ilrepack.msbuild.task\\2.0.13\\ilrepack.msbuild.task.2.0.13.nupkg.sha512",
-    "C:\\Users\\pulla\\.nuget\\packages\\microsoft.build.framework\\15.9.20\\microsoft.build.framework.15.9.20.nupkg.sha512",
-    "C:\\Users\\pulla\\.nuget\\packages\\microsoft.build.utilities.core\\15.9.20\\microsoft.build.utilities.core.15.9.20.nupkg.sha512",
-    "C:\\Users\\pulla\\.nuget\\packages\\microsoft.visualstudio.setup.configuration.interop\\1.16.30\\microsoft.visualstudio.setup.configuration.interop.1.16.30.nupkg.sha512",
-    "C:\\Users\\pulla\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",
-    "C:\\Users\\pulla\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.3.0\\system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
-    "C:\\Users\\pulla\\.nuget\\packages\\ww-blueprint-core\\2.0.4\\ww-blueprint-core.2.0.4.nupkg.sha512"
+    "C:\\Users\\Teraunce\\.nuget\\packages\\assemblypublicizer\\1.0.2\\assemblypublicizer.1.0.2.nupkg.sha512",
+    "C:\\Users\\Teraunce\\.nuget\\packages\\ilrepack.msbuild.task\\2.0.13\\ilrepack.msbuild.task.2.0.13.nupkg.sha512",
+    "C:\\Users\\Teraunce\\.nuget\\packages\\microsoft.build.framework\\15.9.20\\microsoft.build.framework.15.9.20.nupkg.sha512",
+    "C:\\Users\\Teraunce\\.nuget\\packages\\microsoft.build.utilities.core\\15.9.20\\microsoft.build.utilities.core.15.9.20.nupkg.sha512",
+    "C:\\Users\\Teraunce\\.nuget\\packages\\microsoft.visualstudio.setup.configuration.interop\\1.16.30\\microsoft.visualstudio.setup.configuration.interop.1.16.30.nupkg.sha512",
+    "C:\\Users\\Teraunce\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",
+    "C:\\Users\\Teraunce\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.3.0\\system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
+    "C:\\Users\\Teraunce\\.nuget\\packages\\ww-blueprint-core\\2.7.8\\ww-blueprint-core.2.7.8.nupkg.sha512"
   ],
   "logs": []
 }

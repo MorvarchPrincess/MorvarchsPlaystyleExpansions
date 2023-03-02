@@ -7,10 +7,11 @@ using Kingmaker.UnitLogic.Mechanics;
 using BlueprintCore.Conditions.Builder;
 using Kingmaker.Blueprints.Classes.Spells;
 using System.Collections.Generic;
-using MorvarchsPlaystyleExpansions
+using MorvarchsPlaystyleExpansions;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Utils.Types;
 using BlueprintCore.Conditions.Builder.ContextEx;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 
 namespace UnnamedWotrMod.Classes.SanguineArchon
 {
@@ -36,7 +37,7 @@ namespace UnnamedWotrMod.Classes.SanguineArchon
                 .SetDescription(LocalizationTool.CreateString("FuriousHuntressDescription", "", false))
                 .SetIsClassFeature(true)
                 .SetRanks(1)
-                .AddAttackStatReplacement(true,null,BlueprintCore.Blueprints.CustomConfigurators.ComponentMerge.Fail, Kingmaker.EntitySystem.Stats.StatType.Strength, Kingmaker.Enums.WeaponSubCategory.None, new List<Blueprint<BlueprintWeaponTypeReference>> { Longbow, Shortbow })
+                //.AddAttackTypeAttackBonus(true,null,BlueprintCore.Blueprints.CustomConfigurators.ComponentMerge.Fail, Kingmaker.EntitySystem.Stats.StatType.Strength, Kingmaker.Enums.WeaponSubCategory.None, new List<Blueprint<BlueprintWeaponTypeReference>> { Longbow, Shortbow })
                 .Configure();
         }
     }
@@ -53,7 +54,7 @@ namespace UnnamedWotrMod.Classes.SanguineArchon
                 .SetDescription(LocalizationTool.CreateString("CastlingAbilityDescription", "", false))
                 .SetActionType(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Swift)
                 .SetCustomRange(fivefeet)
-                .SetAnimationStyle(Kingmaker.View.Animation.CastAnimationStyle.CastActionSpecialAttack)
+                //.SetAnimationStyle(Kingmaker.View.Animation.CastAnimationStyle.CastActionSpecialAttack)
                 .AddAbilityCustomDimensionDoorSwap()
                 .AddAbilityTargetIsAlly(true)
                 .AddAbilityTargetRangeRestriction(CompareOperation.Type.LessOrEqual, fivefeet)

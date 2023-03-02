@@ -12,8 +12,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Templates = UnnamedWotrMod.Common.CreatedTemplates;
-using CommonTemplates = UnnamedWotrMod.Common.CommonReferencedTemplates;
+using Templates = MorvarchsPlaystyleExpansions.Common.CreatedTemplates;
+using CommonTemplates = MorvarchsPlaystyleExpansions.Common.CommonReferencedTemplates;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 
 namespace UnnamedWotrMod.Classes.SanguineArchon
 {
@@ -26,7 +27,7 @@ namespace UnnamedWotrMod.Classes.SanguineArchon
                 .SetDescription(LocalizationTool.CreateString("HardenedHeartFeatureDescription", "", false))
                 .SetIsClassFeature(true)
                 .SetRanks(1)
-                .AddFacts(new string[] { CommonTemplates.Bravery })
+                .AddFacts(new(){ CommonTemplates.Bravery })
                 .Configure();
         }
     }

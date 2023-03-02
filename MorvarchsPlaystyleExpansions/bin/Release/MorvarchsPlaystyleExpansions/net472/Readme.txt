@@ -1,0 +1,1 @@
+Bladed Brush, Furious Huntress, and Way of the Shooting Star do not have their attack altering properties. I don't know how to update them and no one else seems to either.

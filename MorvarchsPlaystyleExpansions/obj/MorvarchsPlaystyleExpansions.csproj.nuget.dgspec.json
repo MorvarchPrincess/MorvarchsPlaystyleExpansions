@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pulla\\Git\\Pathfinder\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions.csproj": {}
+    "E:\\GitHub\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pulla\\Git\\Pathfinder\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions.csproj": {
+    "E:\\GitHub\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pulla\\Git\\Pathfinder\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions.csproj",
+        "projectUniqueName": "E:\\GitHub\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions.csproj",
         "projectName": "MorvarchsPlaystyleExpansions",
-        "projectPath": "C:\\Users\\pulla\\Git\\Pathfinder\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions.csproj",
-        "packagesPath": "C:\\Users\\pulla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pulla\\Git\\Pathfinder\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\obj\\",
+        "projectPath": "E:\\GitHub\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions.csproj",
+        "packagesPath": "C:\\Users\\Teraunce\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHub\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pulla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Teraunce\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,7 +44,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[1.0.1, )"
+              "version": "[1.0.2, )"
             },
             "ILRepack.MSBuild.Task": {
               "target": "Package",
@@ -52,10 +52,10 @@
             },
             "WW-Blueprint-Core": {
               "target": "Package",
-              "version": "[2.0.4, )"
+              "version": "[2.7.8, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     }
