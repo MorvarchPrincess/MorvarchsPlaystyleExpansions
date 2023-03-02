@@ -6,15 +6,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ExpandedContent;
 using ExpandedContent.Extensions;
-using Resources = ExpandedContent.Resources;
 using UnityEngine;
 using ExpandedContent.Utilities;
 using BlueprintCore.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes.Prerequisites;
+using Kingmaker.Blueprints.Facts;
 
-namespace UnnamedWotrMod.Classes.SanguineArchon
+namespace MorvarchsPlaystyleExpansions.Classes.SanguineArchon
 {
     [HarmonyPatch(typeof(BlueprintsCache), "Init")]
     public class SanguineArchonClassAdder
@@ -66,14 +67,14 @@ namespace UnnamedWotrMod.Classes.SanguineArchon
                     Kingmaker.EntitySystem.Stats.StatType.SkillKnowledgeWorld,
                     Kingmaker.EntitySystem.Stats.StatType.SkillPerception
                 };
-                bp.AddComponent<PrerequisiteNoClassLevel>(c =>
-                {
-                    c.m_CharacterClass = AnimalClass.ToReference<BlueprintCharacterClassReference>();
-                });
-                bp.AddComponent<PrerequisiteIsPet>(c => {
-                    c.Not = true;
-                    c.HideInUI = true;
-                });
+                //bp.AddComponent<PrerequisiteNoClassLevel>(c =>
+                //{
+                 //   c.m_CharacterClass = AnimalClass.ToReference<BlueprintCharacterClassReference>();
+                //});
+                //bp.AddComponent<PrerequisiteIsPet>(c => {
+                //    c.Not = true;
+                //    c.HideInUI = true;
+                //});
             });
             Helpers.RegisterClass(SanguineArchonClass);
         }
@@ -81,8 +82,8 @@ namespace UnnamedWotrMod.Classes.SanguineArchon
         public static void AddSanguineArchonProgression()
         {
             var SanguineArchonProgression = Helpers.CreateBlueprint<BlueprintProgression>("SanguineArchonProgression");
-            SanguineArchonProgression.SetName("Sanguine Archon");
-            SanguineArchonProgression.SetDescription("");
+            //SanguineArchonProgression.SetName("Sanguine Archon");
+            //SanguineArchonProgression.SetDescription("");
             SanguineArchonProgression.LevelEntries = new LevelEntry[]
             {
                 Helpers.LevelEntry(1),

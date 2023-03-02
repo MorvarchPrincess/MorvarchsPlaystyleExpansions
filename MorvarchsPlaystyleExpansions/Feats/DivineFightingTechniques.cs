@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Kingmaker.Blueprints;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 
 namespace MorvarchsPlaystyleExpansions.Feats
 {
@@ -33,10 +35,10 @@ namespace MorvarchsPlaystyleExpansions.Feats
                 .SetGroups(FeatureGroup.Feat, FeatureGroup.CombatFeat)
                 .AddPrerequisiteAlignment(Kingmaker.UnitLogic.Alignments.AlignmentMaskType.ChaoticGood)
                 .AddPrerequisiteParametrizedWeaponFeature(Template.WeaponFocus, Kingmaker.Enums.WeaponCategory.Starknife)
-                .AddRecommendationStatComparison(4, Kingmaker.EntitySystem.Stats.StatType.Charisma, Kingmaker.EntitySystem.Stats.StatType.Dexterity)
+                .AddRecommendationStatComparison(Kingmaker.EntitySystem.Stats.StatType.Charisma, Kingmaker.EntitySystem.Stats.StatType.Dexterity, 4)
                 .AddRecommendationHasFeature(Template.Desna)
                 .AddWeaponTypeDamageStatReplacement(Kingmaker.Enums.WeaponCategory.Starknife, false, Kingmaker.EntitySystem.Stats.StatType.Charisma, false)
-                .AddAttackStatReplacement(true, null, BlueprintCore.Blueprints.CustomConfigurators.ComponentMerge.Fail, Kingmaker.EntitySystem.Stats.StatType.Charisma, Kingmaker.Enums.WeaponSubCategory.None, new List<Blueprint<BlueprintWeaponTypeReference>> { Template.Starknife })
+                //.AddAttackTypeAttackBonus(true, null, BlueprintCore.Blueprints.CustomConfigurators.ComponentMerge.Fail, Kingmaker.EntitySystem.Stats.StatType.Charisma, Kingmaker.Enums.WeaponSubCategory.None, new List<Blueprint<BlueprintWeaponTypeReference>> { Template.Starknife })
                 .Configure();
 
             FeatureSelectionConfigurator.For(Template.BasicFeatSelectionGuid).AddToAllFeatures(FeatName).Configure();
