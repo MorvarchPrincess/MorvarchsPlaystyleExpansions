@@ -1,4 +1,6 @@
-﻿using BlueprintCore.Blueprints.Configurators.Classes;
+﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.Configurators.Classes;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using Template = MorvarchsPlaystyleExpansions.Common.CreatedTemplates;
 using CommonTemplates = MorvarchsPlaystyleExpansions.Common.CommonReferencedTemplates;
 using System;
