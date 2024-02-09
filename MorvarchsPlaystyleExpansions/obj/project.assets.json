@@ -96,7 +96,7 @@
           }
         }
       },
-      "WW-Blueprint-Core/2.0.4": {
+      "WW-Blueprint-Core/2.8.4": {
         "type": "package",
         "compile": {
           "lib/net472/BlueprintCore.dll": {}
@@ -246,10 +246,10 @@
         "system.runtime.interopservices.runtimeinformation.nuspec"
       ]
     },
-    "WW-Blueprint-Core/2.0.4": {
-      "sha512": "q2JhSkenebm/ImIR0LJ74SkOS8TovSoCfa6oPOr+oj4eguCBm9BMfJycKVLsfMphV/mI/8qKKzNf5IQIyApuRQ==",
+    "WW-Blueprint-Core/2.8.4": {
+      "sha512": "UKENy75K81dg0gjP5l57aSAwWP6LAsGXLd7FO23XicSu6N+NP66QZkzyrLDo6XRO181Lud5XMUhwhFQdiDLA1g==",
       "type": "package",
-      "path": "ww-blueprint-core/2.0.4",
+      "path": "ww-blueprint-core/2.8.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -258,7 +258,7 @@
         "content/BlueprintCore/changes.md",
         "lib/net472/BlueprintCore.dll",
         "lib/net472/BlueprintCore.xml",
-        "ww-blueprint-core.2.0.4.nupkg.sha512",
+        "ww-blueprint-core.2.8.4.nupkg.sha512",
         "ww-blueprint-core.nuspec"
       ]
     }
@@ -267,14 +267,14 @@
     ".NETFramework,Version=v4.7.2": [
       "AssemblyPublicizer >= 1.0.1",
       "ILRepack.MSBuild.Task >= 2.0.13",
-      "WW-Blueprint-Core >= 2.0.4"
+      "WW-Blueprint-Core >= 2.8.4"
     ]
   },
   "packageFolders": {
     "C:\\Users\\pulla\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.2.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\pulla\\Git\\Pathfinder\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions.csproj",
       "projectName": "MorvarchsPlaystyleExpansions",
@@ -321,10 +321,10 @@
           },
           "WW-Blueprint-Core": {
             "target": "Package",
-            "version": "[2.0.4, )"
+            "version": "[2.8.4, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
       }
     }
   }

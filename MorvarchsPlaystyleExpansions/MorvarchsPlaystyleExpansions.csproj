@@ -4,6 +4,7 @@
 	  <LangVersion>latest</LangVersion>
 	  <!-- Set to net46 for Kingmaker -->
 	  <TargetFramework>net472</TargetFramework>
+	  <Version>1.2.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -32,7 +33,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="ILRepack.MSBuild.Task" Version="2.0.13" />
-    <PackageReference Include="WW-Blueprint-Core" Version="2.8.0" />
+    <PackageReference Include="WW-Blueprint-Core" Version="2.8.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,7 +41,7 @@
       <HintPath>$(WrathPath)\Wrath_Data\Managed\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>$(SolutionDir)\lib\Assembly-CSharp.dll</HintPath>
+      <HintPath>$(WrathPath)\Wrath_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
 	  <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>$(WrathPath)\Wrath_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>

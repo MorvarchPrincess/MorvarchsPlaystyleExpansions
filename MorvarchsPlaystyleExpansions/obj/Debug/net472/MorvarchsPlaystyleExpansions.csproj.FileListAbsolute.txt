@@ -12,9 +12,12 @@ C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExp
 C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\bin\Debug\MorvarchsPlaystyleExpansions\net472\Newtonsoft.Json.dll
 C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\bin\Debug\MorvarchsPlaystyleExpansions\net472\Owlcat.Runtime.Core.dll
 C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\bin\Debug\MorvarchsPlaystyleExpansions\net472\Owlcat.Runtime.UI.dll
+C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\bin\Debug\MorvarchsPlaystyleExpansions\net472\Owlcat.Runtime.Validation.dll
 C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\bin\Debug\MorvarchsPlaystyleExpansions\net472\Owlcat.Runtime.Visual.dll
+C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\bin\Debug\MorvarchsPlaystyleExpansions\net472\TabletopTweaks-Core.dll
 C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\bin\Debug\MorvarchsPlaystyleExpansions\net472\UnityEngine.CoreModule.dll
 C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\bin\Debug\MorvarchsPlaystyleExpansions\net472\UnityEngine.dll
+C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\bin\Debug\MorvarchsPlaystyleExpansions\net472\TabletopTweaks-Core.pdb
 C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\obj\Debug\net472\MorvarchsPlaystyleExpansions.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\obj\Debug\net472\MorvarchsPlaystyleExpansions.AssemblyInfoInputs.cache
 C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\obj\Debug\net472\MorvarchsPlaystyleExpansions.AssemblyInfo.cs
@@ -22,6 +25,3 @@ C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExp
 C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\obj\Debug\net472\MorvarchsPlaystyleExpansions.csproj.CopyComplete
 C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\obj\Debug\net472\MorvarchsPlaystyleExpansions.dll
 C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\obj\Debug\net472\MorvarchsPlaystyleExpansions.pdb
-C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\bin\Debug\MorvarchsPlaystyleExpansions\net472\TabletopTweaks-Core.dll
-C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\bin\Debug\MorvarchsPlaystyleExpansions\net472\TabletopTweaks-Core.pdb
-C:\Users\pulla\Git\Pathfinder\MorvarchsPlaystyleExpansions\MorvarchsPlaystyleExpansions\obj\Debug\net472\MorvarchsPlaystyleExpansions.csproj.AssemblyReference.cache

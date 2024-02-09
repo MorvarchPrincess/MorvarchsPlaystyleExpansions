@@ -6,7 +6,6 @@ using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;
 using MorvarchsPlaystyleExpansions.Feats;
 using BlueprintCore.Utils;
-using JetBrains.Annotations;
 using MorvarchsPlaystyleExpansions.Classes;
 
 namespace MorvarchsPlaystyleExpansions

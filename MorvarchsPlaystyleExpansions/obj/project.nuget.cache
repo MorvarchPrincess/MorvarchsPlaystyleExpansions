@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FVcV0wmE6yp/Fci9SX67ML1f5Y5lWubI4wLhltiy7tPq1Ho8eQt+PH4YQXshFRLLSlCSlflsbZOhIr2niI4mMw==",
+  "dgSpecHash": "D20edEF5Krij7jAbz0NQ+8DLiqIjslEcDd451uXjRo1ZsqZR7B5kFStNprYZgk1HDXSCYfxCgFd7cEZQHwPVew==",
   "success": true,
   "projectFilePath": "C:\\Users\\pulla\\Git\\Pathfinder\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,7 @@
     "C:\\Users\\pulla\\.nuget\\packages\\microsoft.visualstudio.setup.configuration.interop\\1.16.30\\microsoft.visualstudio.setup.configuration.interop.1.16.30.nupkg.sha512",
     "C:\\Users\\pulla\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",
     "C:\\Users\\pulla\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.3.0\\system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
-    "C:\\Users\\pulla\\.nuget\\packages\\ww-blueprint-core\\2.0.4\\ww-blueprint-core.2.0.4.nupkg.sha512"
+    "C:\\Users\\pulla\\.nuget\\packages\\ww-blueprint-core\\2.8.4\\ww-blueprint-core.2.8.4.nupkg.sha512"
   ],
   "logs": []
 }
