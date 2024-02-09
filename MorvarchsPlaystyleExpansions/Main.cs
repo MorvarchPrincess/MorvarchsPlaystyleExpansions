@@ -6,14 +6,14 @@ using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;
 using MorvarchsPlaystyleExpansions.Feats;
 using BlueprintCore.Utils;
-using JetBrains.Annotations;
+using MorvarchsPlaystyleExpansions.Classes;
 
 namespace MorvarchsPlaystyleExpansions
 {
     public static class Main
     {
         public static bool Enabled;
-        private static readonly LogWrapper Logger = LogWrapper.Get("MagicalAptitude");
+        private static readonly LogWrapper Logger = LogWrapper.Get("MorvarchsPlaystyleExpansions");
 
         public static bool Load(UnityModManager.ModEntry modEntry)
         {
@@ -58,6 +58,8 @@ namespace MorvarchsPlaystyleExpansions
                     Logger.Info("Patching blueprints.");
                     DivineFightingTechniques.Configure();
                     BladedBrush.Configure();
+                    DivineSignifier.Configure();
+                    HellknightShadow.Configure();
                 }
                 catch (Exception e)
                 {
@@ -66,41 +68,9 @@ namespace MorvarchsPlaystyleExpansions
             }
         }
 
-        internal static void LogPatch(string v, object coupDeGraceAbility)
-        {
-            throw new NotImplementedException();
-        }
-
         public static void Log(string msg)
         {
-            Logger.Warn(msg);
-        }
-        [System.Diagnostics.Conditional("DEBUG")]
-        public static void LogDebug(string msg)
-        {
-            Logger.Warn(msg);
-        }
-        public static void LogPatch(string action, [NotNull] IScriptableObjectWithAssetId bp)
-        {
-            Log($"{action}: {bp.AssetGuid} - {bp.name}");
-        }
-        public static void LogHeader(string msg)
-        {
-            Log($"--{msg.ToUpper()}--");
-        }
-        public static void Error(Exception e, string message)
-        {
-            Logger.Error(message);
-            Logger.Error(e.ToString());
-        }
-        public static void Error(string message)
-        {
-            Logger.Error(message);
-        }
-
-        internal static void LogPatch(string v, Action addPulura)
-        {
-            throw new NotImplementedException();
+            Logger.Info(msg);
         }
     }
 }

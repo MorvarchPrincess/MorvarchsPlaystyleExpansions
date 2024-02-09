@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\pulla\\Git\\Pathfinder\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions.csproj": {
-      "version": "1.0.0",
+      "version": "1.2.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\pulla\\Git\\Pathfinder\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions\\MorvarchsPlaystyleExpansions.csproj",
         "projectName": "MorvarchsPlaystyleExpansions",
@@ -52,7 +52,7 @@
             },
             "WW-Blueprint-Core": {
               "target": "Package",
-              "version": "[2.0.4, )"
+              "version": "[2.8.4, )"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
